@@ -53,6 +53,12 @@
             tools = hp: { fourmolu = hp.fourmolu; ghcid = null; treefmt = config.treefmt.build.wrapper; } // config.treefmt.build.programs;
 
             hlsCheck.enable = true;
+
+            mkShellArgs = {
+              buildInputs = with pkgs; [
+                gnumake
+              ];
+            };
           };
 
         };
