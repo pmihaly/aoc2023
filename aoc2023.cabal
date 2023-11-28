@@ -65,6 +65,11 @@ executable aoc2023
 
     -- Other library packages from which modules are imported.
     build-depends:    base ^>=4.17.2.1
+                    , relude ^>= 1.2.1.0
+
+    mixins:         base hiding (Prelude)
+                    , relude (Relude as Prelude)
+                    , relude
 
     -- Directories containing source files.
     hs-source-dirs:   app

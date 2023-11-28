@@ -31,13 +31,9 @@
           # (defined by `defaults.packages` option).
           #
           # packages = {
-          #   aeson.source = "1.5.0.0"; # Hackage version override
-          #   shower.source = inputs.shower;
+          #   relude.source = inputs.relude;
           # };
           # settings = {
-          #   aeson = {
-          #     check = false;
-          #   };
           #   relude = {
           #     haddock = false;
           #     broken = false;
