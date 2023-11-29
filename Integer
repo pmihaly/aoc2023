@@ -1,0 +1,11 @@
+GHC.Utils.Panic pgmError :: String -> a
+GHC.Utils.Panic panic :: String -> a
+GHC.Utils.Panic sorry :: String -> a
+GHC.Utils.Panic cmdLineError :: String -> a
+GHC.Utils.Panic.Plain panic :: String -> a
+GHC.Utils.Panic.Plain sorry :: String -> a
+GHC.Utils.Panic.Plain pgmError :: String -> a
+GHC.Utils.Panic.Plain cmdLineError :: String -> a
+Distribution.PackageDescription.Utils cabalBug :: String -> a
+Distribution.PackageDescription.Utils userBug :: String -> a
+-- plus more results not shown, pass --count=20 to see more
