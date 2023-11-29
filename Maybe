@@ -1,1 +1,0 @@
-Control.Arrow zeroArrow :: ArrowZero a => a b c

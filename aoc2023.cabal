@@ -61,13 +61,11 @@ executable aoc2023
     -- other-modules:
 
     -- LANGUAGE extensions used by modules in this package.
-    default-extensions: OverloadedStrings
+    -- other-extensions:
 
     -- Other library packages from which modules are imported.
     build-depends:    base ^>=4.17.2.1
                     , relude ^>= 1.2.1.0
-                    , attoparsec ^>= 0.14.4
-                    , time ^>= 1.12.2
 
     mixins:         base hiding (Prelude)
                     , relude (Relude as Prelude)
