@@ -47,15 +47,8 @@ extra-doc-files:    CHANGELOG.md
 -- Extra source files to be distributed with the package, such as examples, or a tutorial module.
 -- extra-source-files:
 
-common warnings
+common aoc2023
     ghc-options: -Wall
-
-executable aoc2023
-    -- Import common warning flags.
-    import:           warnings
-
-    -- .hs or .lhs file containing the Main module.
-    main-is:          Main.hs
 
     -- Modules included in this executable, other than Main.
     -- other-modules:
@@ -71,8 +64,10 @@ executable aoc2023
                     , relude (Relude as Prelude)
                     , relude
 
-    -- Directories containing source files.
-    hs-source-dirs:   app
-
     -- Base language which the package is written in.
     default-language: Haskell2010
+
+executable 1
+    import: aoc2023
+    hs-source-dirs: app
+    main-is: 1.hs
