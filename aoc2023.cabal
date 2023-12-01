@@ -69,5 +69,5 @@ common aoc2023
 
 executable 1
     import: aoc2023
-    hs-source-dirs: app
+    hs-source-dirs: app/1
     main-is: 1.hs

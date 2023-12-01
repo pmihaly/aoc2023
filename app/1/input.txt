@@ -1,0 +1,13 @@
+The HTTP module provides a simple interface for sending and receiving content over HTTP in Haskell. Here's how to fetch a document from a URL and return it as a String:
+
+   simpleHTTP (getRequest "http://www.haskell.org/") >>= fmap (take 100) . getResponseBody
+       -- fetch document and return it (as a 'String'.)
+Other functions let you control the submission and transfer of HTTP Requests and Responses more carefully, letting you integrate the use of HTTP functionality into your application.
+
+The module also exports the main types of the package, Request and Response, along with Header and functions for working with these.
+
+The actual functionality is implemented by modules in the Network.HTTP.* namespace, letting you either use the default implementation here by importing Network.HTTP or, for more specific uses, selectively import the modules in Network.HTTP.*. To wit, more than one kind of representation of the bulk data that flows across a HTTP connection is supported. (see Network.HTTP.HandleStream.)
+
+NOTE: The Request send actions will normalize the Request prior to transmission. Normalization such as having the request path be in the expected form and, possibly, introduce a default Host: header if one isn't already present. Normalization also takes the "user:pass@" portion out of the the URI, if it was supplied, and converts it into Authorization: Basic$ header. If you do not want the requests tampered with, but sent as-is, please import and use the the Network.HTTP.HandleStream or Network.HTTP.Stream modules instead. They export the same functions, but leaves construction and any normalization of Request@s to the user.
+
+NOTE: This package only supports HTTP; it does not support HTTPS. Attempts to use HTTPS result in an error.
